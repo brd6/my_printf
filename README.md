@@ -5,4 +5,5 @@ Ce projet consiste à écrire un programme reproduissant la fonction printf de l
 # Usage
 
 usage : my_printf("format", ...);
+
 Pour plus de détail, voir la fonction printf.
