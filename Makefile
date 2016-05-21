@@ -5,7 +5,7 @@
 ## Login   <bongol_b@epitech.net>
 ##
 ## Started on  Sun Nov  1 21:13:19 2015 berdrigue bongolo-beto
-## Last update Sat May 21 23:51:14 2016 Berdrigue BONGOLO BETO
+## Last update Sun May 22 00:24:39 2016 Berdrigue BONGOLO BETO
 ##
 
 CC	= 	gcc
@@ -62,7 +62,6 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 	ranlib $(NAME)
-	$(LIBCPY)
 
 clean:
 	$(RM) $(OBJS)
