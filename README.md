@@ -1,10 +1,20 @@
-# EPITECH-My_printf
 
 This project consists of rewriting the printf function of the C library
 
-# Usage : 
+### Usage : 
+```
 my_printf("format", ...);
+```
 
-format : %[flags][width][.precision][length]specifier 
+### Format : 
+```
+%[flags][width][.precision][length]specifier 
+```
 
-for more detail, see : man printf or http://www.cplusplus.com/reference/cstdio/printf/
+### Exemples :
+
+See examples in the test directory.
+
+
+
+for more detail about the function printf, see : man printf or http://www.cplusplus.com/reference/cstdio/printf/
