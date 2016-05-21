@@ -2,8 +2,9 @@
 
 This project consists of rewriting the printf function of the C library
 
-# Usage
+# Usage : 
+my_printf("format", ...);
 
-usage : my_printf("format", ...);
+format : %[flags][width][.precision][length]specifier 
 
-Pour plus de détail, voir la fonction printf.
+for more detail, see : man printf or http://www.cplusplus.com/reference/cstdio/printf/
