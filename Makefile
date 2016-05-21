@@ -5,68 +5,71 @@
 ## Login   <bongol_b@epitech.net>
 ##
 ## Started on  Sun Nov  1 21:13:19 2015 berdrigue bongolo-beto
-## Last update Sat Nov 14 18:36:37 2015 berdrigue bongolo-beto
+## Last update Sat May 21 23:51:14 2016 Berdrigue BONGOLO BETO
 ##
 
-CC      = gcc
+CC	= 	gcc
 
-RM      = rm -Rf
+RM	= 	rm -Rf
 
-AR		= ar cr
+AR	= 	ar cr
 
-RAN		= ranlib
+NAME 	= 	libmyprintf.a
 
-NAME 	= libmy.a
+CFLAGS	=	-I./include
 
-SRCS	= ./lib/my/my_strlen.c \
-		./lib/my/my_nbr_len.c \
-		./lib/my/my_printf.c \
-		./lib/my/my_utils.c \
-		./lib/my/my_strdup.c \
-		./lib/my/my_putchar.c \
-		./lib/my/print_char.c \
-		./lib/my/my_put_nbr.c \
-		./lib/my/init_arg.c \
-		./lib/my/my_get_char_pos.c \
-		./lib/my/print_nbr.c \
-		./lib/my/my_strcpy.c \
-		./lib/my/print_str.c \
-		./lib/my/my_putstr.c \
-		./lib/my/print_nil.c \
-		./lib/my/my_atoi.c \
-		./lib/my/print_utils.c \
-		./lib/my/my_putnstr.c \
-		./lib/my/print_percent.c \
-		./lib/my/check_format.c \
-		./lib/my/print_utils2.c \
-		./lib/my/my_putnbr_base.c \
-		./lib/my/print_octal.c \
-		./lib/my/print_unsigned_nbr.c \
-		./lib/my/print_hexa.c \
-		./lib/my/print_pointer.c \
-		./lib/my/print_ncount.c \
-		./lib/my/my_itoa.c \
-		./lib/my/print_binary.c \
-		./lib/my/print_str2.c \
-		./lib/my/convert_base.c \
-		./lib/my/my_getnbr_base.c \
-		./lib/my/my_revstr.c \
-		./lib/my/my_putnbr.c
+LIBCPY	=	cp -f $(NAME) ../
 
-OBJS	= $(SRCS:.c=.o)
+SRCS	=	./src/check_format.c \
+		./src/convert_base_x.c \
+		./src/init_arg.c \
+		./src/my_atoi_x.c \
+		./src/my_get_char_pos_x.c \
+		./src/my_getnbr_base_x.c \
+		./src/my_itoa_x.c \
+		./src/my_nbr_len_x.c \
+		./src/my_printf.c \
+		./src/my_putchar_x.c \
+		./src/my_putnbr_base_x.c \
+		./src/my_put_nbr_x.c \
+		./src/my_putnbr_x.c \
+		./src/my_putnstr_x.c \
+		./src/my_putstr_x.c \
+		./src/my_revstr_x.c \
+		./src/my_strcpy_x.c \
+		./src/my_strdup_x.c \
+		./src/my_strlen_x.c \
+		./src/my_utils.c \
+		./src/print_binary.c \
+		./src/print_char.c \
+		./src/print_hexa.c \
+		./src/print_nbr.c \
+		./src/print_ncount.c \
+		./src/print_nil.c \
+		./src/print_octal.c \
+		./src/print_percent.c \
+		./src/print_pointer.c \
+		./src/print_str2.c \
+		./src/print_str.c \
+		./src/print_unsigned_nbr.c \
+		./src/print_utils2.c \
+		./src/print_utils.c \
+
+OBJS	= 	$(SRCS:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@$(AR) $(NAME) $(OBJS)
-	@$(RAN) $(NAME)
+	$(AR) $(NAME) $(OBJS)
+	ranlib $(NAME)
+	$(LIBCPY)
 
 clean:
-	@$(RM) $(OBJS)
+	$(RM) $(OBJS)
 
 fclean: clean
-	@$(RM) $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
 
-.PHONY: clean, mrproper, re, all, fclean
+.PHONY: clean, re, all, fclean
