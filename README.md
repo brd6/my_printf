@@ -11,7 +11,7 @@ my_printf("format", ...);
 %[flags][width][.precision][length]specifier 
 ```
 
-### Exemples :
+### Examples :
 
 See examples in the test directory.
 
